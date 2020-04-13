@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <a href="{{ url_for('home') }}">return home</a>
+    </div>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="border">
+            <legend>{{ legend }}</legend>
+            <div class="m-10">
+                {{ form.author.label(class="form-control-label") }}
+
+                <!-- print all errors if there are any -->
+                {% if form.author.errors %}
+                    {{ form.author() }}
+                    <div>
+                        {% for error in form.author.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.author() }}
+                {% endif %}
+            </div>
+            <div class="m-10">
+                {{ form.title.label(class="form-control-label") }}
+
+                <!-- print all errors if there are any -->
+                {% if form.title.errors %}
+                    {{ form.title() }}
+                    <div>
+                        {% for error in form.title.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.title() }}
+                {% endif %}
+            </div>
+            <div class="m-10">
+                {{ form.content.label(class="form-control-label") }}
+                
+                <!-- print all errors if there are any -->
+                {% if form.content.errors %}
+                    {{ form.content() }}
+                    <div>
+                        {% for error in form.content.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.content() }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div> 
+            {{ form.submit() }}
+        </div>
+    </form>
+{% endblock content %}

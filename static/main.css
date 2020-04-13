@@ -1,0 +1,20 @@
+p {
+    margin: 1px;
+    font-size: 30px;
+}
+h1 {
+    margin: 1px;
+    font-size: 50px;
+}
+.border {
+    margin: 20px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+.m-10 {
+    margin: 10px;
+}
+a {
+    font-size: 30px;
+}

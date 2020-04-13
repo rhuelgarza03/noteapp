@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if notes %}
+        <div>
+            <a href="{{ url_for('new_note') }}">Create a note!</a>
+        </div>
+        {% for note in notes %}
+            <div class="border">
+                <p>Author: {{ note.author }}</p>
+                <h1>Title: {{ note.title }}</h1>
+                <p>Content: {{ note.content }}</p>
+                <p>Date: {{ note.date_posted.strftime("%m-%d-%Y") }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div>
+            <a href="{{ url_for('new_note') }}">There are currently no notes, click here to create one!</a>
+        </div>
+    {% endif %}
+{% endblock content %}
