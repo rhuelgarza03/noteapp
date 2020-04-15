@@ -8,7 +8,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Length
 
-# basically just the app idk what to say
+# basically just the app
 app = Flask(__name__)
 
 # ========================== DATABASE STUFF ==========================
@@ -69,8 +69,7 @@ def new_note():
 
 
 # ====================================================================
-# there's not much reason to have these '===' separators but I like how they look
 
-# I actually forgot what this does but it's required to run the app so don't touch it lol (and keep it at the bottom)
+# begins the app on http://127.0.0.1:500/ (port 5000 by default)
 if __name__ == "__main__":
     app.run(debug=True)
