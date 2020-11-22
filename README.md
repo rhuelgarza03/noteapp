@@ -1,5 +1,6 @@
 # noteapp
-This is a simple web application that sets notes. I wrote it in python using the flask framework.
+First flask project!!!
+A web application that sets notes. I wrote it in python using the flask framework.
 
 It's very basic and the only reason I have it here is to document, or maybe improve it if I feel like it. This is basically the base for a really bad blogging site.
 
